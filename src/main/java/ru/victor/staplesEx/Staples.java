@@ -6,8 +6,6 @@ import java.util.Queue;
 public class Staples {
 
     public static void main(String[] args) {
-        String staples = "(()()())(()()()";
-        System.out.println(checkStaples(staples));
     }
 
     public static boolean checkStaples(String str){
