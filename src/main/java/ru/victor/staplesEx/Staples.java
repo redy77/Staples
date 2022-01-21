@@ -11,14 +11,12 @@ public class Staples {
     public static boolean checkStaples(String str){
         Queue<Character> queue = new PriorityQueue<>();
         char[] staples = str.toCharArray();
-        if(staples[0] == ')') return false;
-        else {
-            queue.offer(staples[0]);
-            for (int i = 1; i < staples.length; i++) {
-                if(staples[i] == '(') queue.offer(staples[i]);
-                else if (queue.size() != 0)queue.poll();
-                else return false;
-            }
+        for (char staple : staples) {
+            if (queue.size() != 0 && staple == queue.peek())
+                queue.poll();
+            else if (staple == ')') queue.offer('(');
+            else queue.offer(')');
+
         }
         return queue.size() == 0;
     }
