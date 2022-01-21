@@ -45,4 +45,9 @@ public class StaplesTest extends TestCase {
     public void testCheckStaples() {
         Assert.assertSame(check, Staples.checkStaples(staples));
     }
+
+    @Test
+    public void testCheckWithoutCollection() {
+        Assert.assertSame(check, Staples.checkWithoutCollection(staples));
+    }
 }
