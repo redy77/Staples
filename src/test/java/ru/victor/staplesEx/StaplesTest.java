@@ -26,7 +26,7 @@ public class StaplesTest extends TestCase {
                 {"))()()(())()()", false},
                 {"))()()(())()()", false},
                 {"(((", false},
-                {"()()()((())())", true},
+                {"()()()((()())", true},
                 {"(())()()", true},
                 {"()", true},
                 {"(", false},
