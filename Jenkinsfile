@@ -1,12 +1,10 @@
 
 node {
-//     stage ("Checkout") {
-        checkout scm
-//         echo "scm : ${scmInfo}"
-//         echo "${commit}"
-//     }
-    stage ("Condition"){
+    checkout scm
     commitMessage = bat(returnStdout: true, script: 'git log -1 --oneline').trim()
+
+    stage ("Condition"){
+
     echo "______________________"
     echo "${commitMessage}"
 
