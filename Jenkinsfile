@@ -4,7 +4,7 @@ node {
 
 
 //     stage ("Checkout") {
-        scmInfo = checkout scm
+//         scmInfo = checkout scm
 //         echo "scm : ${scmInfo}"
 //         echo "${commit}"
 //     }
