@@ -7,6 +7,7 @@ node {
         echo "scm : ${scmInfo}"
         echo "${scmInfo.GIT_COMMIT}"
         shortCommit = bat(returnStdout: true, script: "git log -n 1 --pretty=format:'%h'").trim()
+        echo "shortCommit"
     }
 }
 // pipeline{
