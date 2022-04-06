@@ -1,7 +1,7 @@
 
 node {
 
-commitMessage = bat(returnStdout: true, script: 'git log -1 --oneline').trim().split
+commitMessage = bat(returnStdout: true, script: 'git log -1 --oneline').trim()
 
 //     stage ("Checkout") {
 //         scmInfo = checkout scm
