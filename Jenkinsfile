@@ -10,8 +10,12 @@ commit.toLowerCase(Locale.ROOT)
         echo "${commit}"
 
 
-                if(commit.contains("dev")){
-                    echo "Success"
-                }
+
+    }
+
+    stage ("Условие"){
+    if(commit.contains("dev")){
+                        echo "PUFFFF"
+                    }
     }
 }
