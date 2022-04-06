@@ -1,6 +1,7 @@
 
 node {
 
+commitMessage =""
 commitMessage = bat(returnStdout: true, script: 'git log -1 --oneline').trim()
 
 //     stage ("Checkout") {
