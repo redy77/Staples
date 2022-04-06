@@ -7,6 +7,7 @@ import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 
 import java.util.Arrays;
+import java.util.Locale;
 
 @RunWith(Parameterized.class)
 public class StaplesTest extends TestCase {
