@@ -10,7 +10,7 @@ commit = bat(returnStdout: true, script: 'git log -1 --oneline').trim()
     }
 
     stage ("Condition"){
-    if(commit.toLowerCase().contains("dev")){
+    if(commit.toLowerCase().contains(" dev ")){
         echo "PUFFFF"
      }
     else{
