@@ -13,9 +13,11 @@ commit.toLowerCase(Locale.ROOT)
 
     }
 
-    stage ("Условие"){
+    stage ("Condition"){
     if(commit.contains("dev")){
                         echo "PUFFFF"
                     }
+    else{
+    echo "fuckoff"}
     }
 }
