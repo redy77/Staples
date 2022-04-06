@@ -6,7 +6,6 @@ node {
         /*...*/
         echo "scm : ${scmInfo}"
         echo "${scmInfo.GIT_COMMIT}"
-        echo "${scmInfo.getCommit()}"
         shortCommit = bat(returnStdout: true, script: "git log -n 1 --pretty=format:'%h'").trim()
     }
 }
