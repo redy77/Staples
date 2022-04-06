@@ -6,7 +6,6 @@ node {
     stage ("Condition"){
     echo "______________________"
     echo "${commitMessage}"
-
     if(commitMessage.toLowerCase().endsWith(" dev")){
         echo "PUFFFF"
      }
