@@ -6,7 +6,7 @@ node {
         /*...*/
         echo "scm : ${scmInfo}"
         echo "${scmInfo.GIT_COMMIT}"
-        echo "${entry.author} ${entry.commitId}:\n${formatter.format(new Date(entry.timestamp))}: *${entry.msg}*\n"
+        echo "${scmInfo.GIT_MESSAGE}"
 
 
     }
