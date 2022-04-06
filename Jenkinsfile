@@ -14,6 +14,7 @@ commit.toLowerCase()
     }
 
     stage ("Condition"){
+
     if(commit.toLowerCase().contains("dev")){
                        echo "PUFFFF"
                     }
