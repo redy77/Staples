@@ -1,14 +1,14 @@
 @NonCPS
 def sendChangeLogs() {
     def commitMessages = ""
-//     def formatter = new SimpleDateFormat('yyyy-MM-dd HH:mm')
-    def changeLogSets = currentBuild.changeSets
-    for (int i = 0; i < changeLogSets.size(); i++) {
-        def entries = changeLogSets[i].items
-        for (int j = 0; j < entries.length; j++) {
-            def entry = entries[j]
-            commitMessages = commitMessages + "${entry.msg}*"
-        }
+//     def changeLogSets = currentBuild.changeSets
+//     for (int i = 0; i < changeLogSets.size(); i++) {
+//         def entries = changeLogSets[i].items
+//         for (int j = 0; j < entries.length; j++) {
+//             def entry = entries[j]
+//
+//         }
+        commitMessages = commitMessages + "${entry.msg}*"
     }
 }
 
