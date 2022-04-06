@@ -16,9 +16,9 @@ node {
     stage ("Checkout") {
 
         scmInfo = checkout scm
-        script {
-                    sendChangeLogs()
-                }
+//         script {
+//                     sendChangeLogs()
+//                 }
 //         echo "scm : ${scmInfo}"
 //         echo "${commitMessages}"
     }
