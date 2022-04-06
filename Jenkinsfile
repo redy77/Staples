@@ -4,7 +4,7 @@ node {
 
         scmInfo = checkout scm
 
-//         echo "scm : ${scmInfo}"
-        echo "scm : {Commit message}"
+        echo "scm : ${scmInfo}"
+//         echo "scm : {Commit message}"
     }
 }
