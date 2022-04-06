@@ -1,8 +1,5 @@
 
 node {
-
-
-
 //     stage ("Checkout") {
         checkout scm
 //         echo "scm : ${scmInfo}"
