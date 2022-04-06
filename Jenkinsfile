@@ -1,16 +1,16 @@
-@NonCPS
-def sendChangeLogs() {
-    def commitMessages = ""
-//     def changeLogSets = currentBuild.changeSets
-//     for (int i = 0; i < changeLogSets.size(); i++) {
-//         def entries = changeLogSets[i].items
-//         for (int j = 0; j < entries.length; j++) {
-//             def entry = entries[j]
-//
-//         }
-        commitMessages = commitMessages + "${entry.msg}*"
-//     }
-}
+// @NonCPS
+// def sendChangeLogs() {
+//     def commitMessages = ""
+// //     def changeLogSets = currentBuild.changeSets
+// //     for (int i = 0; i < changeLogSets.size(); i++) {
+// //         def entries = changeLogSets[i].items
+// //         for (int j = 0; j < entries.length; j++) {
+// //             def entry = entries[j]
+// //
+// //         }
+//         commitMessages = commitMessages + "${entry.msg}*"
+// //     }
+// }
 
 node {
     stage ("Checkout") {
@@ -20,7 +20,7 @@ node {
                     sendChangeLogs()
                 }
 //         echo "scm : ${scmInfo}"
-        echo "${commitMessages}"
+//         echo "${commitMessages}"
     }
 }
 // pipeline{
