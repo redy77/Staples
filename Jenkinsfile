@@ -5,7 +5,6 @@ node {
 //         echo "scm : ${scmInfo}"
 //         echo "${commit}"
 //     }
-
     stage ("Condition"){
     commitMessage = bat(returnStdout: true, script: 'git log -1 --oneline').trim()
     echo "______________________"
