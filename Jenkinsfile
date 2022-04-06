@@ -1,7 +1,7 @@
 
 node {
 commit = bat(returnStdout: true, script: 'git log -1 --oneline').trim()
-commit.toLowerCase(Locale.ROOT)
+commit.toLowerCase()
     stage ("Checkout") {
 
         scmInfo = checkout scm
