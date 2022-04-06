@@ -2,8 +2,9 @@
 node {
 
 commitMessage = bat(returnStdout: true, script: 'git log -1 --oneline').trim()
+
 //     stage ("Checkout") {
-        scmInfo = checkout scm
+//         scmInfo = checkout scm
 //         echo "scm : ${scmInfo}"
 //         echo "${commit}"
 //     }
@@ -11,7 +12,7 @@ commitMessage = bat(returnStdout: true, script: 'git log -1 --oneline').trim()
     stage ("Condition"){
     echo "______________________"
     echo "${commitMessage}"
-    if(commitMessage.toLowerCase().endsWith("dev")){
+    if(commitMessage.toLowerCase().contains("dev")){
         echo "PUFFFF"
      }
     else{
