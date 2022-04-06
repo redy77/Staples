@@ -6,6 +6,6 @@ commit = bat(returnStdout: true, script: 'git log -1 --oneline').trim()
         scmInfo = checkout scm
 
         echo "scm : ${scmInfo}"
-//         echo "scm : {Commit message}"
+        echo "${commit}"
     }
 }
