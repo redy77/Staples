@@ -9,7 +9,7 @@ def sendChangeLogs() {
 //
 //         }
         commitMessages = commitMessages + "${entry.msg}*"
-    }
+//     }
 }
 
 node {
