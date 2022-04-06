@@ -6,7 +6,7 @@ node {
         /*...*/
         echo "scm : ${scmInfo}"
         echo "${scmInfo.GIT_COMMIT}"
-        echo "${scmInfo.GIT_MESSAGE}"
+        echo "${scmInfo.GIT_MESSAGE} # print commit"
 
 
     }
