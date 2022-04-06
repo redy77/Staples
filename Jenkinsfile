@@ -7,7 +7,7 @@ node {
     echo "______________________"
     echo "${commitMessage}"
 
-    if(commitMessage.toLowerCase().endsWith("dev")){
+    if(commitMessage.toLowerCase().endsWith(" dev")){
         echo "PUFFFF"
      }
     else{
