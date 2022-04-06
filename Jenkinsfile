@@ -7,10 +7,9 @@ def sendChangeLogs() {
         def entries = changeLogSets[i].items
         for (int j = 0; j < entries.length; j++) {
             def entry = entries[j]
-            commitMessages = commitMessages + "${entry.author} ${entry.commitId}:\n${formatter.format(new Date(entry.timestamp))}: *${entry.msg}*\n"
+            commitMessages = commitMessages + "${entry.msg}*"
         }
     }
-    slackSend color: "good", message: "Job: `${env.JOB_NAME}`. Starting build with changes:\n${commitMessages}"
 }
 
 node {
@@ -20,10 +19,8 @@ node {
         script {
                     sendChangeLogs()
                 }
-
-        /*...*/
-        echo "scm : ${scmInfo}"
-        echo "${scmInfo.GIT_COMMIT}"
+//         echo "scm : ${scmInfo}"
+//         echo "${scmInfo.GIT_COMMIT}"
     }
 }
 // pipeline{
