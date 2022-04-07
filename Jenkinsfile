@@ -10,7 +10,7 @@
             echo "______________________"
             echo "${branchName}"
             echo "______________________"
-            if (commitMessage.toLowerCase().endsWith(" dev") && branchName.equals("origin/master")) {
+            if (commitMessage.toLowerCase().endsWith(" dev") && branchName.equals("origin/master1")) {
                 echo "PUFFFF"
             } else {
                 echo "fuckoff"
