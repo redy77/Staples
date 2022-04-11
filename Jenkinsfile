@@ -17,7 +17,8 @@
             if (commitMessage.contains("demo") && branchName.equals("origin/demo")) {
                 if(commitMessage.endsWith("demo all")){
                     bat("${PACKAGE_DEMO}")
-                    bat ("${CORE_DATA_DEMO}")
+                    temp = bat ("${CORE_DATA_DEMO}")
+                    echo "{temp}"
                     bat("${SERVICE_ADAPTER_GITLAB_DEMO}")
                     bat("${SSD_ROLE_MANAGER_DEMO}")
                 }
