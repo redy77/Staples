@@ -19,6 +19,8 @@ public class Staples {
 
         }
         return queue.size() == 0;
+
+
     }
 
     public static boolean checkWithoutCollection(String str) {
