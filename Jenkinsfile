@@ -15,7 +15,7 @@
         bat ("ping yahoo.com")
         }
 
-        def package(){
+        def packageDemo(){
         bat ("ping facebook.com")
         }
 
