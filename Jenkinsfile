@@ -12,7 +12,6 @@
                 def packageDemo(){
                 bat ("ping facebook.com")
                 }
-
     node {
         checkout scm
         scmInfo = checkout scm
