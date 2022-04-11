@@ -24,7 +24,7 @@
             commitMessage.toLowerCase()
             echo "branch name ${branchName}"
             if (commitMessage.contains("demo") && branchName.equals("origin/master")) {
-                else if(commitMessage.endsWith("demo all")){
+                if(commitMessage.endsWith("demo all")){
                 serviceAdapter()
                 }
                 else if(commitMessage.endsWith("core-data")){
