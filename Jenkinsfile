@@ -4,11 +4,20 @@
         scmInfo = checkout scm
         commitMessage = bat(returnStdout:true, script:'@git log -1 --oneline').trim()
         branchName = "${scmInfo.GIT_BRANCH}"
-        SSD_ROLE_MANAGER_DEMO = "ping yandex.ru"
-        CORE_DATA_DEMO = "ping google.com"
-        SERVICE_ADAPTER_GITLAB_DEMO = "ping yahoo.com"
-        PACKAGE_DEMO = "ping facebook.com"
+        def ssdRoleManegerDemo(){
+        bat ("ping yandex.ru")
+        }
+        def coreDataDemo(){
+        bat ("ping google.com")
+        }
 
+        def serviceAdapter(){
+        bat ("ping yahoo.com")
+        }
+
+        def package(){
+        bat ("ping facebook.com")
+        }
 
         stage("Build Demo") {
             echo "Commit message ${commitMessage}"
@@ -16,15 +25,10 @@
             echo "branch name ${branchName}"
             if (commitMessage.contains("demo") && branchName.equals("origin/demo")) {
                 if(commitMessage.endsWith("demo all")){
-                    bat("${PACKAGE_DEMO}")
-                    temp = bat ("${CORE_DATA_DEMO}")
-                    echo "{temp}"
-                    bat("${SERVICE_ADAPTER_GITLAB_DEMO}")
-                    bat("${SSD_ROLE_MANAGER_DEMO}")
+                serviceAdapter()
                 }
                 else if(commitMessage.endsWith("core-data")){
-                    bat("${PACKAGE_DEMO}")
-                    bat("${CORE_DATA_DEMO}")
+                coreDataDemo()
                 }
             } else {
                 echo "Keywords not found"
