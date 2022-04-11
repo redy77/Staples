@@ -11,6 +11,8 @@
             echo "______________________"
             echo "${branchName}"
             echo "______________________"
+            commitMessage1 = commitMessage.toLowerCase().replaceAll("\\s","")
+            echo "${commitMessage1}"
             if (commitMessage.toLowerCase().replaceAll("\\s","").endsWith(" dev") && branchName.equals("origin/master")) {
                 echo "PUFFFF"
             } else {
