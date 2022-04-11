@@ -22,12 +22,11 @@
                     bat("${SERVICE_ADAPTER_GITLAB_DEMO}")
                     bat("${SSD_ROLE_MANAGER_DEMO}")
                 }
-                else if(commitMessage.endsWith("core-data"){
+                else if(commitMessage.endsWith("core-data")){
                     bat("${PACKAGE_DEMO}")
                     bat("${CORE_DATA_DEMO}")
                 }
             } else {
                 echo "Keywords not found"
             }
-        }
     }
