@@ -13,7 +13,7 @@
             echo "______________________"
             commitMessage1 = commitMessage.toLowerCase().replaceAll("\\s","")
             echo "${commitMessage1}"
-            if (commitMessage.toLowerCase().replaceAll("\\s","").endsWith(" dev") && branchName.endsWith("origin/master")) {
+            if (commitMessage.toLowerCase().replaceAll("\\s","").endsWith("dev") && branchName.endsWith("master")) {
                 echo "PUFFFF"
             } else {
                 echo "fuckoff"
