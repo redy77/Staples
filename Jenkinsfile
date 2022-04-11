@@ -2,7 +2,7 @@
     node {
         checkout scm
         scmInfo = checkout scm
-        commitMessage = bat(returnStdout:true, script:'git log -1 --oneline').trim()
+        commitMessage = bat(script:'git log -1 --oneline', returnStdout:true).trim()
                 branchName = "${scmInfo.GIT_BRANCH}"
 
                 stage("Condition") {
