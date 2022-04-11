@@ -22,9 +22,9 @@
             echo "Commit message ${commitMessage}"
             commitMessage.toLowerCase()
             echo "branch name ${branchName}"
-            echo "${commitMessage.contains("demo") && branchName.equals("origin/master")}"
+            echo "${commitMessage.contains("demo") && branchName.contains("origin/master")}"
             echo "${commitMessage.endsWith("core-data")}"
-            if (commitMessage.contains("demo") && branchName.equals("origin/master")) {
+            if (commitMessage.contains("demo") && branchName.contains("origin/master")) {
                 if(commitMessage.endsWith("demo all")){
                 serviceAdapter()
                 }
