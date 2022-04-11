@@ -5,7 +5,6 @@
         commitMessage = bat(returnStdout:true, script:'git log -1 --oneline').trim()
                 branchName = "${scmInfo.GIT_BRANCH}"
 
-
                 stage("Condition") {
             echo "______________________"
             echo "${commitMessage}"
