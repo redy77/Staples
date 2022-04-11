@@ -2,21 +2,32 @@
     node {
         checkout scm
         scmInfo = checkout scm
-        commitMessage = bat(script:"@git log --format=format:%%s -1", returnStdout:true).trim()
-                branchName = "${scmInfo.GIT_BRANCH}"
+        commitMessage = bat(returnStdout:true, script:'@git log -1 --oneline').trim()
+        branchName = "${scmInfo.GIT_BRANCH}"
+        SSD_ROLE_MANAGER_DEMO = "ping yandex.ru"
+        CORE_DATA_DEMO = "ping google.com"
+        SERVICE_ADAPTER_GITLAB_DEMO = "ping yahoo.com"
+        PACKAGE_DEMO = "ping facebook.com"
 
-                stage("Condition") {
-            echo "______________________"
+
+
+        stage("Build Demo") {
             echo "Commit message ${commitMessage}"
-            echo "______________________"
-            echo "Branch name ${branchName}"
-            echo "______________________"
-            commitMessage1 = commitMessage.toLowerCase().replaceAll("\\s","")
-            echo "${commitMessage1}"
-            if (commitMessage.toLowerCase().endsWith("dev") && branchName.endsWith("master")) {
-                echo "PUFFFF"
+            commitMessage.toLowerCase()
+            echo "branch name ${branchName}"
+            if (commitMessage.contains("demo") && branchName.equals("origin/demo")) {
+                if(commitMessage.endsWith("demo all")){
+                    bat("${PACKAGE_DEMO}")
+                    bat ("${CORE_DATA_DEMO}")
+                    bat("${SERVICE_ADAPTER_GITLAB_DEMO}")
+                    bat("${SSD_ROLE_MANAGER_DEMO}")
+                }
+                else if(commitMessage.endsWith("core-data"){
+                    bat("${PACKAGE_DEMO}")
+                    bat("${CORE_DATA_DEMO}")
+                }
             } else {
-                echo "fuckoff"
+                echo "Keywords not found"
             }
         }
     }
