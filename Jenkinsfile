@@ -7,9 +7,9 @@
 
                 stage("Condition") {
             echo "______________________"
-            echo "${commitMessage}"
+            echo "Commit message ${commitMessage}"
             echo "______________________"
-            echo "${branchName}"
+            echo "Branch name ${branchName}"
             echo "______________________"
             commitMessage1 = commitMessage.toLowerCase().replaceAll("\\s","")
             echo "${commitMessage1}"
