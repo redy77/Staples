@@ -27,7 +27,7 @@
             echo "${commitMessage.endsWith("core-data")}"
             if (commitMessage.contains("demo") && branchName.contains("origin/master")) {
                 if(commitMessage.endsWith("demo all")){
-                bat($"PACKAGE")
+                bat("${PACKAGE}")
                 }
                 else if(commitMessage.endsWith("core-data")){
                 coreDataDemo()
