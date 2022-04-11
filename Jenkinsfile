@@ -17,6 +17,7 @@
         scmInfo = checkout scm
         commitMessage = bat(returnStdout:true, script:'@git log -1 --oneline').trim()
         branchName = "${scmInfo.GIT_BRANCH}"
+        PACKAGE = "ping yahoo.com"
 
         stage("Build Demo") {
             echo "Commit message ${commitMessage}"
@@ -26,7 +27,7 @@
             echo "${commitMessage.endsWith("core-data")}"
             if (commitMessage.contains("demo") && branchName.contains("origin/master")) {
                 if(commitMessage.endsWith("demo all")){
-                serviceAdapter()
+                bat($"PACKAGE")
                 }
                 else if(commitMessage.endsWith("core-data")){
                 coreDataDemo()
