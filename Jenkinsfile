@@ -10,7 +10,6 @@
         PACKAGE_DEMO = "ping facebook.com"
 
 
-
         stage("Build Demo") {
             echo "Commit message ${commitMessage}"
             commitMessage.toLowerCase()
